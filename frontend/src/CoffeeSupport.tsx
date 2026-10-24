@@ -11,7 +11,7 @@ export function CoffeeSupport() {
     catch { setStatus('Select the UPI ID below and copy it manually.'); }
   }
   return <>
-    <button className="nav-item coffee-support" onClick={() => { setStatus(''); dialog.current?.showModal(); }}>
+    <button className="coffee-support" onClick={() => { setStatus(''); dialog.current?.showModal(); }}>
       <span aria-hidden="true">☕</span>Buy me a coffee
     </button>
     <dialog ref={dialog} className="coffee-dialog" aria-labelledby="coffee-title" onClick={e => { if (e.target === e.currentTarget) dialog.current?.close(); }}>
@@ -19,7 +19,7 @@ export function CoffeeSupport() {
         <button className="coffee-close icon-button" aria-label="Close support dialog" onClick={() => dialog.current?.close()}>×</button>
         <span className="coffee-eyebrow">SUPPORT THE MAKER</span>
         <h2 id="coffee-title">Enjoying Thread?</h2>
-        <p>Buy Sammi a coffee. Your support helps me keep building. Sharing files is always available without a tip.</p>
+        <p>Your support helps me keep building. Sharing files is always available without a tip.</p>
         <img className="coffee-qr" src="/support-upi.svg" width="232" height="232" alt="UPI payment QR for 8826063243@fam" />
         <p className="small">Scan with a UPI app and choose your amount.</p>
         <label className="small" htmlFor="coffee-upi">Pay directly via UPI</label>
