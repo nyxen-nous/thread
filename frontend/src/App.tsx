@@ -1,3 +1,4 @@
+import { CoffeeSupport } from './CoffeeSupport';
 import { useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 import { Session, apiUrl, initialSnapshot } from './session';
@@ -121,6 +122,7 @@ export function App() {
         <button className={view === 'send' ? 'nav-item selected' : 'nav-item'} onClick={() => nav('send')}><Icon name={isReceiver ? 'download' : 'send'} />{isReceiver ? 'Receive a file' : 'Send a file'}</button>
         <button className={view === 'help' ? 'nav-item selected' : 'nav-item'} onClick={() => nav('help')}><Icon name="help" />How it works</button>
         <button className={view === 'privacy' ? 'nav-item selected' : 'nav-item'} onClick={() => nav('privacy')}><Icon name="shield" />Privacy</button>
+        <CoffeeSupport />
       </nav>
       <div className="sidebar-note"><Icon name="link" size={20} /><p>A direct line<br/>between devices.</p><span>No account. No file storage.</span></div>
     </aside>
