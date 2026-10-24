@@ -1,0 +1,10 @@
+node_modules
+.venv
+.git
+.env
+.qa
+.taste-skill
+dist
+**/__pycache__
+test-results
+playwright-report

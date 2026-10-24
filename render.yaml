@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: thread-fileshare
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: STUN_URLS
+        value: stun:stun.cloudflare.com:3478
