@@ -1,0 +1,21 @@
+.thread-anatomy.iso[data-theme="light"]{margin:0 0 30px;--anatomy-weight:.6px;--anatomy-shade-0:#bfc5ba;--anatomy-shade-1:#d4d9ce;--anatomy-shade-2:#e4e8df;--anatomy-shade-3:#edf0e8;--anatomy-top:#f1f3ed;--anatomy-lo:#adb7a3;--anatomy-mid:#7f8d74}
+.thread-anatomy .transfer-plate{padding:0;border:1px solid #e1e6da;border-radius:12px;box-shadow:none;overflow:hidden;background:#f5f7f1;--anatomy-paper:#f5f7f1}
+.transfer-figure-heading{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:25px 27px 0}
+.transfer-eyebrow{display:block;font:9px/1.5 var(--anatomy-mono);letter-spacing:.14em;color:#7c8872;margin-bottom:7px}
+.transfer-figure-heading h2{font-size:19px;letter-spacing:-.45px;color:#30392b;font-weight:500}
+.demo-play{display:flex;align-items:center;justify-content:center;gap:6px;font-size:11px;color:#64725a;background:#fcfdf9;border:1px solid #dce3d4;border-radius:30px;min-height:36px;padding:8px 12px;flex-shrink:0}
+.demo-play:hover{background:#e9eee2}.demo-play:disabled{opacity:.6;cursor:default}
+.thread-anatomy .device-scene{width:100%;margin:-8px auto -12px;overflow:hidden}
+.device-label{fill:#819075;font:10px Geist,Arial,sans-serif;letter-spacing:.2px}
+.transfer-figure-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 27px 22px;color:#5e6d54;font-size:11px;min-height:39px}
+.demo-status{display:inline-flex;align-items:center;gap:8px;min-width:0}.demo-dot{width:5px;height:5px;flex-shrink:0;background:#a3b099;border-radius:50%}.demo-dot.is-done{background:#557744}
+.demo-tag{font:8px/1.5 var(--anatomy-mono);letter-spacing:.1em;color:#8c9783}
+.transfer-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:17px;border-bottom:1px solid var(--line)}
+.transfer-steps button{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 5px 14px;min-height:46px;background:none;text-align:left;font-size:12px;color:#83877d}
+.transfer-steps button>span{font:9px var(--anatomy-mono);opacity:.7}.transfer-steps button::after{content:'';position:absolute;bottom:-1px;height:2px;left:0;right:0;background:#596f49;transform:scaleX(0);transition:transform .3s}
+.transfer-steps button:hover{color:#3b4b30}.transfer-steps button.is-current{color:#35452b}.transfer-steps button.is-current::after{transform:scaleX(1)}
+.transfer-caption{font-size:13px;padding-top:17px;min-height:64px;line-height:1.7}.transfer-caption strong{color:var(--ink);font-weight:500}
+.transfer-disclaimer{font-size:11px;line-height:1.65;margin-top:10px;color:#85887f}
+.demo-completion,.demo-approval{transition:opacity .4s ease}
+@media(max-width:650px){.transfer-figure-heading{padding:20px 18px 0;gap:10px}.transfer-eyebrow{font-size:8px;letter-spacing:.08em;margin-bottom:5px}.transfer-figure-heading h2{font-size:17px}.demo-play{font-size:10px;min-height:36px;padding:8px 10px}.thread-anatomy .device-scene{width:112%;max-width:none;margin:3px -6% -4px}.transfer-figure-foot{padding:0 18px 17px;font-size:10px;gap:8px}.demo-tag{font-size:7px}.device-label{font-size:11px}.transfer-steps{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:13px;gap:4px 12px;border:0}.transfer-steps button{justify-content:flex-start;padding:11px 3px;border-bottom:1px solid var(--line);font-size:12px}.transfer-caption{font-size:12px;min-height:76px;padding-top:15px}.transfer-disclaimer{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.demo-completion,.demo-approval,.transfer-steps button::after{transition:none}}

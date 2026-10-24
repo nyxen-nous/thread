@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
+    "build:anatomy": "node scripts/build-anatomy.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --experimental-strip-types --test frontend/tests/*.test.ts",
     "test:backend": "python3 -m unittest discover -s backend/tests -v",
@@ -26,3 +27,4 @@
     "node": ">=22.0.0"
   }
 }
+
