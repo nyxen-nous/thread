@@ -8,7 +8,7 @@ export function CoffeeSupport() {
   const [status, setStatus] = useState('');
   async function copy() {
     try { await navigator.clipboard.writeText(UPI_ID); setStatus('UPI ID copied.'); }
-    catch { setStatus('Select the UPI ID below and copy it manually.'); }
+    catch { setStatus('Please scan the QR code instead.'); }
   }
   return <>
     <button className="coffee-support" onClick={() => { setStatus(''); dialog.current?.showModal(); }}>
@@ -22,8 +22,6 @@ export function CoffeeSupport() {
         <p>Your support helps me keep building. Sharing files is always available without a tip.</p>
         <img className="coffee-qr" src="/support-upi.svg" width="232" height="232" alt="UPI payment QR for 8826063243@fam" />
         <p className="small">Scan with a UPI app and choose your amount.</p>
-        <label className="small" htmlFor="coffee-upi">Pay directly via UPI</label>
-        <input id="coffee-upi" className="coffee-upi" value={UPI_ID} readOnly onFocus={e => e.target.select()} />
         <div className="coffee-actions"><a className="primary" href={PAYMENT_URL}>Open UPI app</a><button className="secondary" onClick={() => void copy()}>Copy UPI ID</button></div>
         <p className="small">Mobile app support varies. If the button doesn’t open your app, use the QR or copy the ID. Check the recipient shown in your UPI app before paying.</p>
         <p className="small">Thread cannot confirm payments. Your payment app provides the receipt.</p>
