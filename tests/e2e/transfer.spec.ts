@@ -16,8 +16,10 @@ for (const size of [0, 2 * 1024 * 1024]) {
       await sender.goto('/');
       await sender.getByLabel('Choose a file to share').setInputFiles({ name: 'sample.bin', mimeType: 'application/octet-stream', buffer: data });
       await sender.getByRole('button', { name: 'Create private link' }).click();
-      const link = sender.getByLabel('Your private link');
+      const link = sender.getByRole('textbox', { name: 'Your private link' });
       await expect(link).toHaveValue(/\/s\/[^#]+#.+/);
+      const qr = sender.getByRole('img', { name: 'QR code for your private link' });
+      await expect(qr).toBeVisible();
       await receiver.goto(await link.inputValue());
       await receiver.getByRole('button', { name: 'Connect to sender' }).click();
       await expect(sender.getByRole('button', { name: 'Allow connection' })).toBeVisible();
